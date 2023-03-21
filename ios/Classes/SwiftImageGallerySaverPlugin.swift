@@ -42,7 +42,6 @@ public class SwiftImageGallerySaverPlugin: NSObject, FlutterPlugin {
                     ]
                 result(myResult)
             }
-            }
         }
       } else {
         result(FlutterMethodNotImplemented)
