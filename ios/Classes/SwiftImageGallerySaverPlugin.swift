@@ -35,6 +35,13 @@ public class SwiftImageGallerySaverPlugin: NSObject, FlutterPlugin {
         } else {
             if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(path)) {
                 saveVideo(path, isReturnImagePath: isReturnFilePath)
+            } else {
+                let myResult: [String: Any] = [
+                        "code": 500,
+                        "message": "文件格式不支持"
+                    ]
+                result(myResult)
+            }
             }
         }
       } else {
